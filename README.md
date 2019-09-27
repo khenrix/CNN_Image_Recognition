@@ -18,6 +18,26 @@ virtualenv venv
 
 venv\Scripts\activate
 
-pip install jupyter
+pip install -r requirements.txt
 ```
 4. Get ready to do some machine learning magic.
+
+## Using tensorflow with GPU
+
+If you are planning on using tensorflow with GPU instead of CPU then you need to install CUDA and related packages. 
+
+Guide is available at 
+https://www.tensorflow.org/install/gpu
+
+The package you will be using is  
+
+```
+pip install tensorflow-gpu
+```
+
+System requirements (Stable version 1.14):
+* NVIDIA® GPU drivers — CUDA 10.0 requires 410.x or higher.
+* CUDA® Toolkit — TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
+* CUPTI - ships with the CUDA Toolkit.
+* cuDNN - SDK (>= 7.4.1)
+* (Optional) TensorRT 5.0 - to improve latency and throughput for inference on some models.
